@@ -227,3 +227,7 @@ cmd.json
 __pycache__/
 *.pyc
 .env
+memory.txt
+memory_long.txt
+memory_short.txt
+murmur.py.bak2
