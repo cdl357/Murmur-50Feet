@@ -70,4 +70,12 @@ def push_activate(text:str)->dict:
  return r.json()
 
 if __name__=="__main__":
- mcp.run(transport="sse",host="0.0.0.0",port=8765)
+    import sys
+    print("Murmur 启动")
+    threading.Thread(target=tick_loop,daemon=True).start()
+    threading.Thread(target=mloop,daemon=True).start()
+    while True:
+        try:
+            time.sleep(3600)
+        except KeyboardInterrupt:
+            break
