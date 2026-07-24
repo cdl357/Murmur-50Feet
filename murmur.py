@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 import json,time,threading,random,urllib.request,os
-from从 datetime import导入 datetime从 datetime 导入 datetime
-from从 pathlib import Path
+from datetime import datetime 
+from pathlib import Path
 
-B=os.environ.get("MURMUR_BASE_URL","")B=等于。environ.get("MURMUR_BASE_URL","")B=等于。environ。get("MURMUR_BASE_URL","")
-K=os.environ环境.get("MURMUR_API_KEY","")K=等于。environ.get("MURMUR_API_KEY","")K=等于。环境。get("MURMUR_API_KEY","")K=等于。环境。get("MURMUR_API_KEY","")K=等于。environ.get("MURMUR_API_KEY","")K=等于。环境。get("MURMUR_API_KEY","")K=等于。环境。get("MURMUR_API_KEY","")
-M=os.environ.get("MURMUR_MODEL","[C]claude-sonnet-4-6")M=等于。environ.get("MURMUR_MODEL","[C]claude-sonnet-4-6")M=os。environ.get("MURMUR_MODEL","[C]claude-sonnet-4-6")M=等于。environ。get("MURMUR_MODEL","[C]claude-sonnet-4-6")
+B=os.environ.get("MURMUR_BASE_URL","")
+K=os.environ.get("MURMUR_API_KEY","")
+M=os.environ.get("MURMUR_MODEL","[C]claude-sonnet-4-6")
 
 TICK,MRMR,MTH,PTH=600,1200,0.65,0.50
 PIV=7200
