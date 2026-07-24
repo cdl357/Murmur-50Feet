@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-import json,time,threading,random,urllib.request,os
-from datetime import datetime
-from pathlib import Path
+import导入 json,time,threading,random,urllib.request,os导入json、time、threading、random、urllib.request、os
+from从 datetime import导入 datetime从 datetime 导入 datetime
+from从 pathlib import Path
 
-B=os.environ.get("MURMUR_BASE_URL","")
-K=os.environ.get("MURMUR_API_KEY","")
-M=os.environ.get("MURMUR_MODEL","[C]claude-sonnet-4-6")
+B=os.environ.get("MURMUR_BASE_URL","")B=等于。environ.get("MURMUR_BASE_URL","")B=等于。environ。get("MURMUR_BASE_URL","")
+K=os.environ环境.get("MURMUR_API_KEY","")K=等于。environ.get("MURMUR_API_KEY","")K=等于。环境。get("MURMUR_API_KEY","")K=等于。环境。get("MURMUR_API_KEY","")K=等于。environ.get("MURMUR_API_KEY","")K=等于。环境。get("MURMUR_API_KEY","")K=等于。环境。get("MURMUR_API_KEY","")
+M=os.environ.get("MURMUR_MODEL","[C]claude-sonnet-4-6")M=等于。environ.get("MURMUR_MODEL","[C]claude-sonnet-4-6")M=os。environ.get("MURMUR_MODEL","[C]claude-sonnet-4-6")M=等于。environ。get("MURMUR_MODEL","[C]claude-sonnet-4-6")
 
 TICK,MRMR,MTH,PTH=600,1200,0.65,0.50
 PIV=7200
@@ -271,24 +271,13 @@ def mloop():
    if t:save_arc(n,v,t)
 
 def main():
- print("Murmur 启动")
- threading.Thread(target=tick_loop,daemon=True).start()
- threading.Thread(target=mloop,daemon=True).start()
- try:
-  while True:
-   try:txt=input("> ").strip()
-   except EOFError:time.sleep(60);continue
-   if not txt:continue
-   if txt=="status":status();continue
-   if txt=="tick":tick();check_push();print("tick");continue
-   if txt=="murmur":
-    n,d=top();t=gen(n,d["v"])
-    if t:save_arc(n,d["v"],t)
-    continue
-   if txt=="push":
-    n,d=top();push_ntfy(n,d["z"])
-    continue
-   print(f"未知命令:{txt}")
- except KeyboardInterrupt:print("\n停止")
+    print("Murmur 启动")
+    threading.Thread(target=tick_loop, daemon=True).start()
+    threading.Thread(target=mloop, daemon=True).start()
+    while True:
+        try:
+            time.sleep(3600)
+        except KeyboardInterrupt:
+            break
 
 if __name__=="__main__":main()
