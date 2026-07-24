@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import导入 json,time,threading,random,urllib.request,os导入json、time、threading、random、urllib.request、os
+import json,time,threading,random,urllib.request,os
 from从 datetime import导入 datetime从 datetime 导入 datetime
 from从 pathlib import Path
 
