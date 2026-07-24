@@ -3,6 +3,7 @@ import json,time
 from pathlib import Path
 
 app=Flask(__name__)
+Path("/root/murmur").mkdir(parents=True, exist_ok=True)
 
 @app.template_global()
 def cst(s):
